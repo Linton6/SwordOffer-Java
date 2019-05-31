@@ -79,7 +79,7 @@ public class PrintListFromTailToHead {
             list1.add(i,list.get(--a));
         }
         return list1;
-    }
+     }
 
 }
 

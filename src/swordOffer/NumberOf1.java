@@ -17,7 +17,7 @@ public class NumberOf1 {
             if (a.charAt(i) == 49) {
                 b++;
             }
-        }
+         }
         return b;
     }
 

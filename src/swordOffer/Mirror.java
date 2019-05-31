@@ -58,7 +58,7 @@ public class Mirror {
             Exchange(root);
         }
 
-    }
+     }
 
     // 左右子节点进行交换
     public static void Exchange(TreeNode root1) {

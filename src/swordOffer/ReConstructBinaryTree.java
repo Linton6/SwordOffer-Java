@@ -18,7 +18,7 @@ public class ReConstructBinaryTree {
         TreeNode a = new TreeNode(1);
         return a;
 
-    }
+     }
 }
 
 class TreeNode {

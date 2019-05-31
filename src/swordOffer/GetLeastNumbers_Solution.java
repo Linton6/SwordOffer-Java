@@ -18,7 +18,7 @@ public class GetLeastNumbers_Solution {
     }
 
     public static ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
-        if(k <= 0 || k > input.length  ) {
+        if(k <= 0 || k > input.length   ) {
             return null;
         }
         if (input.length == 0){

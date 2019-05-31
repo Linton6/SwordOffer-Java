@@ -16,7 +16,7 @@ public class Power {
             for (int i = 0; i < exponent - 1; i++) {
                 base = base * a;
 //            base *= a;
-            }
+             }
 
         } else if (exponent == 0) {
             return 1;

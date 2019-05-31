@@ -20,7 +20,7 @@ public class PushAndQueue {
         System.out.println(pop());
         System.out.println(pop());
 
-    }
+     }
 
    static Stack<Integer> stack1 = new Stack<Integer>();
    static Stack<Integer> stack2 = new Stack<Integer>();

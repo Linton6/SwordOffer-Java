@@ -20,7 +20,7 @@ public class RectCover {
         }
         if (target == 2) {
             return 2;
-        }
+         }
         int a = rectCover(target -1) + rectCover(target -2);
         return a;
     }

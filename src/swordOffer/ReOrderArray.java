@@ -35,7 +35,7 @@ public class ReOrderArray {
                 arry1.add(array[i]);
             } else {
                 arry2.add(array[i]);
-            }
+             }
         }
         for (int i = 0; i < arry1.size(); i++) {
             array[i] = arry1.get(i);

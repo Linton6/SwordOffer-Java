@@ -33,7 +33,7 @@ public class HasSubtree {
                 result = doesTree1HaveTree2(root1, root2);
             }
             //
-            if (!result) {
+            if (!result ) {
                 result = HasSubtree(root1.left, root2);
             }
 
@@ -67,15 +67,15 @@ public class HasSubtree {
 }
 
 
-class TreeNode {
-   int val = 0;
-   TreeNode left = null;
-   TreeNode right = null;
+//class TreeNode {
+//   int val = 0;
+//   TreeNode left = null;
+//   TreeNode right = null;
+//
+//   public TreeNode(int val) {
+//       this.val = val;
+//
+//   }
 
-   public TreeNode(int val) {
-       this.val = val;
-
-   }
-
-}
+//}
 
