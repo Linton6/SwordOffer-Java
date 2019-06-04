@@ -28,8 +28,6 @@ public class Solution {
         System.out.println(  solution.listAll.toString());
 
 
-
-
      }
 
     /**
