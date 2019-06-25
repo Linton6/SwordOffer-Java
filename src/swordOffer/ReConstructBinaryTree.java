@@ -23,8 +23,8 @@ public class ReConstructBinaryTree {
 
 class TreeNode {
    int val;
-   TreeNode left;
-   TreeNode right;
+   TreeNode left = null;
+   TreeNode right = null;
    TreeNode(int x) {
        val = x;
    }
