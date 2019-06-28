@@ -1,6 +1,8 @@
 package swordOffer;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 题目描述：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -13,7 +15,6 @@ public class ReConstructBinaryTree {
         HashMap a =new HashMap();
         int aa =3 / 10;
     }
-
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
         TreeNode a = new TreeNode(1);
         return a;

@@ -1,5 +1,13 @@
 package swordOffer;
 
+import java.net.InetAddress;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.*;
+
+import java.net.URL;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+
 /**
  * @Author Linton
  * @Date 2019/6/21 15:26
@@ -10,8 +18,34 @@ package swordOffer;
 
 public class CodeTest {
     public static void main(String[] args) {
-        int uglyNum = new UglyNum().GetUglyNumber_Solution(6);
-        System.out.println(uglyNum);
+
+        //
+        URL[] urls = sun.misc.Launcher.getBootstrapClassPath().getURLs();
+        String a = "rt rty  ui bghg1";
+        String[] b = a.split(" ");
+        String[] c = a.split("1",2);
+        List list = new ArrayList<Integer>();
+        list.add(51);
+        list.add(a);
+        list.add('3');
+        list.forEach(System.out::println);
+        System.out.println(list.get(0) == list.get(2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 

@@ -1,6 +1,9 @@
 package swordOffer;
 
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.*;
 
 /**
@@ -14,7 +17,7 @@ import java.util.*;
 
 public class Permutation {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 //        char[] str = {'a','b','c'};
 //        permutation(str,0);
         List<String> list = new ArrayList<>();
@@ -42,11 +45,22 @@ public class Permutation {
 //            System.out.println(iterator.next());
 //        }
 
+        Permutation permutation = new Permutation();
+        Class clazz = permutation.getClass();
+        String className = clazz.getName();
+        Method[] methods = clazz.getDeclaredMethods();
+        Field[] fields = clazz.getDeclaredFields();
+        System.out.println();
+        Permutation o = (Permutation) Class.forName("swordOffer.Permutation").newInstance();
+        Method method = clazz.getDeclaredMethod("m",int.class);
+        method.invoke(null,1);
+        System.out.println();
 
     }
 
 
-
+    public  static int longg;
+    public  String m;
     public static void permutation(char[] str, int n){
         if(str == null || n >= str.length){
             return;
@@ -74,34 +88,8 @@ public class Permutation {
         str[j] = temp;
     }
 
-}
+    public static void m(int i){
+        System.out.println("m123m");
+    }
 
-// 全排列
-//public class Permutation{
-//    public static void main(String[] args) {
-//
-//        char[] str = {'a','b','c','d'};
-//        permtation(str, 0);
-//
-//    }
-//
-//    public static void permtation(char[] str, int n){
-//        if(str == null || n >= str.length){
-//            return;
-//        }
-//        if(n == str.length - 1){
-//            System.out.println(str);
-//        } else {
-//            for(int j = n; j < str.length; j++){
-//                char temp = str[j];
-//                str[j] = str[n];
-//                str[n] = temp;
-//                permtation(str, n + 1);
-//                temp = str[j];
-//                str[j] = str[n];
-//                str[n] = temp;
-//            }
-//        }
-//    }
-//
-//}
+}
