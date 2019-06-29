@@ -28,8 +28,17 @@ public class CodeTest {
         list.add(51);
         list.add(a);
         list.add('3');
-        list.forEach(System.out::println);
-        System.out.println(list.get(0) == list.get(2));
+//        list.forEach(System.out::println);
+//        System.out.println(list.get(0) == list.get(2));
+
+        char[] chars = {'1','a','9','z','A'};
+        for (char a1:chars) {
+            int a2 = a1;
+            System.out.println(a2);
+
+        }
+        Stack<Integer> stack = new Stack();
+
 
 
 
