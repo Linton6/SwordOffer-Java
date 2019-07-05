@@ -1,5 +1,7 @@
 package swordOffer;
 
+import java.util.Scanner;
+
 /**
  * @Author Linton
  * @Date 2019/6/26 16:52
@@ -12,8 +14,16 @@ package swordOffer;
 
 public class Match {
     public static void main(String[] args) {
-        char[] a = {'a'};
-        char[] b = {'.','*'};
+        String[] strings = new String[2];
+
+        Scanner sc = new Scanner(System.in);
+        String n = sc.nextLine();
+        strings[0] = n;
+        String n1 = sc.nextLine();
+        strings[1] = n1;
+
+        char[] a = strings[0].toCharArray();
+        char[] b = strings[1].toCharArray();
         boolean c =  new  Match().match(a,b);
         System.out.println(c);
     }
@@ -70,7 +80,7 @@ public class Match {
             }
         }
         // 应该没有情况了  这就是str先结束的情况
-        return false;
+        return true;
     }
 }
 
