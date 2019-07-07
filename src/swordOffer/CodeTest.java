@@ -1,11 +1,16 @@
 package swordOffer;
 
 import java.net.InetAddress;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.*;
 
 import java.net.URL;
 import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 /**
@@ -17,28 +22,21 @@ import java.util.stream.Stream;
  */
 
 public class CodeTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws  Exception {
 
         //
-        URL[] urls = sun.misc.Launcher.getBootstrapClassPath().getURLs();
-        String a = "rt rty  ui bghg1";
-        String[] b = a.split(" ");
-        String[] c = a.split("1",2);
-        List list = new ArrayList<Integer>();
-        list.add(51);
-        list.add(a);
-        list.add('3');
-//        list.forEach(System.out::println);
-//        System.out.println(list.get(0) == list.get(2));
-
-        char[] chars = {'1','a','9','z','A'};
-        for (char a1:chars) {
-            int a2 = a1;
-            System.out.println(a2);
-
-        }
-        Stack<Integer> stack = new Stack();
-
+        URL[] urls = Launcher.getBootstrapClassPath().getURLs();
+        List<Integer> op = new ArrayList<>();
+        op.add(51);
+        op.add(12);
+        op.add(21);
+        int[] hj = {2,3,4};
+        String json = "{\"ttt\"}";
+        Pattern pattern = Pattern.compile("[a-z]*ab");
+        Matcher matcher = pattern.matcher("cab");
+        boolean m = matcher.matches();
+        String das = "dsadsadas";
+        String r = das.replace('r','r').replace("sd","dsd");
 
 
 
@@ -56,6 +54,7 @@ public class CodeTest {
 
 
     }
+
 
 
 }
