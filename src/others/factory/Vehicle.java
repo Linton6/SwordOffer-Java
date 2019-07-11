@@ -2,15 +2,13 @@ package others.factory;
 
 /**
  * @Author Linton
- * @Date 2019/7/7 21:07
+ * @Date 2019/7/7 21:57
  * @Email lintonhank@foxmail.com
  * @Version 1.0
  * @Description
  */
 
-public class PlaneFactory {
-    public Plane createPlane(){
-        return new Plane();
-    }
+public abstract class Vehicle {
+    public abstract void run();
 }
 

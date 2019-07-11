@@ -1,4 +1,6 @@
-package others.factory;
+package others.factory.springBeanFactory;
+
+import others.factory.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ import java.util.List;
  * @Description
  */
 
-public class Car extends Vehicle  {
+public class Car implements Moveable  {
 
     private static Car car  = new Car();    // 单例
 
@@ -19,7 +21,7 @@ public class Car extends Vehicle  {
 
 
 
-    public Car () {}
+    public Car() {}
 
     public static Car getInstance() { // 静态工厂
 

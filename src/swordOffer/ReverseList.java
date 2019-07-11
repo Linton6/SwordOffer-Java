@@ -17,7 +17,7 @@ public class ReverseList {
         ListNode a5 = new ListNode(5);
         ListNode a6 = new ListNode(6);
         ListNode a7 = new ListNode(7);
-//        a1.next = a2;
+        a1.next = a2;
         a2.next = a3;
         a3.next = a4;
         a4.next = a5;
@@ -33,7 +33,24 @@ public class ReverseList {
 
     }
 
-    public static ListNode reverseList(ListNode pHead){
+    public static ListNode reverseList(ListNode head) {
+        if(head == null){
+            return null;
+        }
+        ListNode pre = null; // 链表的反转
+        ListNode next = null; // 用来保存head下一个节点，以免链表断开后，找不到原链表下一个节点
+
+        while(head != null){
+            next = head.next; // 保存原链表下一个节点
+            head.next = pre;  // 把以前的链表节点指向上一个
+            pre = head;        // pre往后一下，指向新链表的下一个，即最后一个节点
+            head = next;        // head节点回到原链表的下一个节点
+        }
+
+        return pre; // 此时pre指向新链表最后一个，但链表方向已经反转a<-b<-c<-d<-e<-f
+    }
+
+/*    public static ListNode reverseList(ListNode pHead){
         if (pHead == null) {
             return null;
         }
@@ -54,7 +71,7 @@ public class ReverseList {
 
         return pReversedHead;
 
-    }
+    }*/
 
     public static void displayListNode(ListNode pHead){
         while (pHead != null) {

@@ -7,24 +7,20 @@ import java.util.Calendar;
  * @Date 2019/7/7 18:48
  * @Email lintonhank@foxmail.com
  * @Version 1.0
- * @Description
+ * @Description  简单工厂和工厂方法的区别   抽象工厂：系列产品
  */
 
 public class Test {
     public static void main(String[] args) {
-        Car car = Car.getInstance();
-        Car car2 = Car.getInstance();
-        if (car == car2) {
-            System.out.println("Same Car");
-        }
+        AbstractFactory abstractFactory = new DefaultFactory();
 
+        Vehicle vehicle = abstractFactory.createVehicle();
+        vehicle.run();
+        Weapon weapon = abstractFactory.createWeapon();
+        weapon.shoot();
+        Food food = abstractFactory.createFood();
+        food.printName();
 
-        car.run();
-
-        PlaneFactory factory = new PlaneFactory();
-        Moveable f = factory.createPlane();
-        Moveable m = new Plane();
-        m.run();
 
 
     }

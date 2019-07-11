@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans >
+
+    <bean id="v" class="others.factory.springBeanFactory.Train">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <!--<bean id="..." class="...">-->
+        <!--&lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- more bean definitions go here -->
+
+</beans>

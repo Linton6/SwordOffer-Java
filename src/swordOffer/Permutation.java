@@ -61,13 +61,13 @@ public class Permutation {
 
     public  static int longg;
     public  String m;
-    public static void permutation(char[] str, int n){
-        if(str == null || n >= str.length){
+    public static void permutation(char[] str, int n){  // n = 0开始
+        if(str == null || n >= str.length){  // 非法输入
             return;
         }
-        if (n == (str.length - 1)) {
+        if (n == (str.length - 1)) {   // 当 n=length-1, 字符串排满,一个全排列结束，打印
             System.out.println(str);
-        } else {
+        } else {           //否则， 一个全排列还未结束  ，执行for循环
             for (int i = n;i < str.length; i++ ){
 //                    char temp = str[i];
 //                    str[i] = str[n];

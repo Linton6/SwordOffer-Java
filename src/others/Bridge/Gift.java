@@ -1,14 +1,13 @@
-package others.factory;
+package others.Bridge;
 
 /**
  * @Author Linton
- * @Date 2019/7/7 20:59
+ * @Date 2019/7/8 8:59
  * @Email lintonhank@foxmail.com
  * @Version 1.0
  * @Description
  */
 
-public interface Moveable {
-    void run();
+public class Gift {
 }
 
