@@ -78,6 +78,7 @@ public class PrintBinaryTree {
             if (tobePrinted == 0) {
                 System.out.println();
                 tobePrinted = nextLevel;
+                nextLevel = 0;
             }
         }
 

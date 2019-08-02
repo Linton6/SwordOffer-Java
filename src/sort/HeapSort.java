@@ -37,14 +37,14 @@ public class HeapSort {
      */
     public static void adjustHeap(int[] arr, int i, int length){
         int temp = arr[i];
-        for (int k = i*2+1; k<length; k= k*2+1){
+        for (int k = i*2+1; k < length; k= k*2+1){
             if (k+1 < length && arr[k]<arr[k+1]) {
-                k++;
+                k++ ;
             }
-            if(arr[k] >temp){//如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）
+            if(arr[k] > temp){//如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）
                 arr[i] = arr[k];
-                i = k;
-            }else{
+                i = k ;
+            } else {
                 break;
             }
 

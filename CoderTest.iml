@@ -19,5 +19,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Arquillian JUnit:Release" level="project" />
+    <orderEntry type="library" name="jedis-2.9.0" level="project" />
   </component>
 </module>
