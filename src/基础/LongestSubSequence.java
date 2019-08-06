@@ -1,9 +1,6 @@
-package zuo;
+package 基础;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @Author Linton

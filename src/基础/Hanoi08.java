@@ -1,4 +1,4 @@
-package zuo;
+package 基础;
 
 /**
  * @Author Linton
@@ -8,9 +8,9 @@ package zuo;
  * @Description  汉诺塔
  */
 
-public class Hanoi {
+public class Hanoi08 {
     public static void main(String[] args) {
-       doTower(5, "A", "B", "C");
+       doTower(5, "左", "中", "右");
 
     }
     /** @汉诺塔问题*/
