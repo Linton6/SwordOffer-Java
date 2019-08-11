@@ -10,22 +10,118 @@ package enterprise;
  * @Description
  */
 import java.util.*;
-
 public class Main {
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        in.nextLine();
-        ArrayList<Integer> list = new ArrayList<>();
-        while (n > 0 ) {
-            String s = in.nextLine();
-            list.add((Integer.valueOf(String.valueOf(s.charAt(0)))));
-            list.add((Integer.valueOf(String.valueOf(s.charAt(2)))));
-            n--;
-        }
-        merge(list);
+        OneCount(n);
     }
+
+    /**
+     * 购物单
+     * 2019-8-9 22:26:14
+     */
+
+    /**
+     * 求Int型整数在内存中存储时1的个数
+     */
+    private static void OneCount(int n) {
+        System.out.println(Integer.bitCount(n));
+    }
+
+    /**
+     * 字串的链接最长路径查找
+     * 2019-8-9 21:40:41
+     */
+    private static void LongPath( String[] str ){
+        Arrays.sort(str);
+        for (String s : str) {
+            System.out.println(s);
+        }
+    }
+
+    /**
+     * 句子逆转
+     * 2019-8-9 21:33:36
+     * 空间复杂度O(N)  时间复杂度O(N)   ？？？？？？？？？？？？？空间复杂度为O(1)怎么办呢？
+     */
+
+    private static void SentenceReverse(String str) {
+        String[] strs = str.split(" ");
+        int size = strs.length;
+        for (int  i = size - 1; i >= 0; i--) {
+            System.out.print(strs[i] + " ");
+        }
+    }
+
+    /**
+     * 字符串反转
+     * 2019-8-9 21:32:40
+     */
+
+    /**
+     * 数字颠倒
+     * 2019-8-9 21:29:26
+     */
+    private static void ReversePrint(String str) {
+        StringBuilder stringBuilder = new StringBuilder(str);
+        System.out.println(stringBuilder.reverse().toString());
+    }
+
+    /**
+     * 字符个数统计
+     * 2019-8-9 21:25:14
+     */
+    private static void CharCount(String str) {
+        int size = str.length();
+        int arr[] = new int[128];
+        int res = 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[str.charAt(i)] == 0) {
+                res++;
+                arr[str.charAt(i)]++;
+            }
+        }
+        System.out.println(res);
+    }
+
+    /**
+     * 提取不重复的整数
+     * 2019-8-9 20:51:31
+     * 哈希表法
+     */
+
+    private static void NoRepeat1(String str) {
+        int size = str.length();
+        int arr[] = new int[10];
+        for (int i = size - 1; i >= 0; i--) {
+            if (arr[str.charAt(i) - '0'] == 0){
+                System.out.print(str.charAt(i));
+                arr[str.charAt(i) - '0']++;
+            }
+        }
+    }
+    private static void NoRepeat(int in)  {
+        StringBuilder str = new StringBuilder(String.valueOf(in));
+        StringBuilder res = new StringBuilder("");
+        str = str.reverse();
+        int size = str.length();
+        boolean add = true;
+        for (int i = 0; i < size; i++){
+            for (int j = i - 1 ; j >= 0; j--){
+                if (str.charAt(i) == str.charAt(j)) {
+                    add = false;
+                }
+            }
+            if (add){
+                res.append(str.charAt(i));
+            }
+            add = true;
+        }
+        System.out.println(res.toString());
+    }
+
+
 
     /**
      * h合并表记录

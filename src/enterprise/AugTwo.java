@@ -7,7 +7,7 @@ import java.util.*;
  * @Date 2019/8/2 15:55
  * @Email lintonhank@foxmail.com
  * @Version 1.0
- * @Description  牛客网上网易的编程题
+ * @Description 牛客网上网易的编程题
  */
 
 public class AugTwo {
@@ -22,19 +22,19 @@ public class AugTwo {
             String s = in.nextLine();
             String[] strs = s.split(" ");
             int Di = Integer.parseInt(strs[0]);
-            int Pi =  Integer.parseInt(strs[1]);
+            int Pi = Integer.parseInt(strs[1]);
             hashMap.put(Di, Pi);
         }
         String Ms = in.nextLine();
         String[] Mss = Ms.split(" ");
         int[] member = new int[M];
         int i = 0;
-        for(String m : Mss){
+        for (String m : Mss) {
             member[i++] = Integer.parseInt(m);
         }
 
         int[] Pi_arr = choice(member, hashMap);
-        for (Integer p: Pi_arr) {
+        for (Integer p : Pi_arr) {
             System.out.println(p);
         }
 
@@ -42,7 +42,7 @@ public class AugTwo {
     }
 
     // 返回一个数组即可   遇到重复的key就GG
-    private static int[] choice (int[] member, HashMap<Integer, Integer> hashMap) {
+    private static int[] choice(int[] member, HashMap<Integer, Integer> hashMap) {
         if (member == null || member.length == 0 || hashMap == null) return null;
         int size_hashMap = hashMap.size();
         Set<Integer> set = hashMap.keySet();
@@ -51,26 +51,27 @@ public class AugTwo {
         int k = 0;
         int p = 0;
         int u = 0;
-        for(Integer s : set) {
+        for (Integer s : set) {
             Di_arr[k++] = s;
         }
         Arrays.sort(Di_arr);
         for (int aMember : member) {
             Pi_arr[p++] = find(aMember, Di_arr);
         }
-        for(Integer aPi : Pi_arr) {
+        for (Integer aPi : Pi_arr) {
             Pi_arr[u++] = hashMap.get(aPi);
         }
         return Pi_arr;
     }
 
     // 在一个数组中找到比它小的最大值，返回int arr是已排序的数组
-    private static int find (int num, int[] arr) {
+    private static int find(int num, int[] arr) {
+
         if (arr == null || arr.length == 0) return 0;
-        for(int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (num < arr[i] && i > 0) {
-                return  arr[i - 1];
-            } else if (num == arr[i] ) {
+                return arr[i - 1];
+            } else if (num == arr[i]) {
                 return arr[i];
             }
         }
