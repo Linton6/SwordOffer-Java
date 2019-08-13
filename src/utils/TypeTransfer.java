@@ -67,9 +67,10 @@ public class TypeTransfer {
             return o2 - o1;
         }
     }
+
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(new MinComparator()); // 小根堆
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(new MaxComparator());// 大根堆
         int[] arr ={};
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(new MinComparator());
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(new MaxComparator());
         for (Integer i : arr) {
             maxHeap.add(i);
         }

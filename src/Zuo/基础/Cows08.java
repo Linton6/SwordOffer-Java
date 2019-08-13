@@ -1,5 +1,6 @@
 package Zuo.基础;
 
+import java.util.*;
 /**
  * @Author Linton
  * @Date 2019/8/6 12:12
@@ -15,4 +16,3 @@ package Zuo.基础;
 
 public class Cows08 {
 }
-
