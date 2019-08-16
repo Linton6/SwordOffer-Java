@@ -9,18 +9,97 @@ package enterprise;
  * @Description
  */
 
-import java.util.*;
 
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-////        int n = in.nextInt();
-//
+        Scanner in = new Scanner(System.in);
+        while (in.hasNext()){
+            String a = in.nextLine();
+            String[] strs = a.split(" ");
+            Arrays.sort(strs);
+            for (int i = 0; i< strs.length; i++) {
+                System.out.print(strs[i] + " ");
+            }
+        }
+//        int n = in.nextInt();
+////
 //        while (in.hasNext()) {
 //            String n1 = in.nextLine();
-//            BuddyChar(n1);
+//            charReveese(n1);
 //        }
-        GradeSort();
+    }
+    /**
+     * 统计每个月兔子的总数
+     * 2019-8-14 16:36:03
+     */
+    private static void  rabbit (){
+        Scanner in = new Scanner(System.in);
+
+        while (in.hasNextInt()){
+            int n = in.nextInt();
+            System.out.println(rabbit_2(n));
+        }
+
+
+    }
+    private static int rabbit_2(int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        if (n == 2) return 1;
+
+        return rabbit_2(n - 1) + rabbit_2(n - 2) ;
+    }
+
+    /**
+     * 单词倒排
+     * 2019-8-14 10:53:10
+     */
+    /**  这个写得好
+     * 链接：https://www.nowcoder.com/questionTerminal/81544a4989df4109b33c2d65037c5836?f=discussion
+     * 来源：牛客网
+     *
+     * import java.util.*;
+     * public class Main{
+     *   public static void main(String args[]){
+     *     Scanner sc=new Scanner(System.in);
+     *     while(sc.hasNext()){
+     *       String str=sc.nextLine();
+     *       String []strArray=str.split("[^a-zA-Z]+");
+     *       for(int i=strArray.length-1;i>=2;i--){
+     *         System.out.print(strArray[i]+' ');
+     *       }
+     *       if(strArray[0].length()==0)//如果字符串数组的第一个元素是空串，那么下标为1的元素就是最后一个要输出的元素，末尾不要再加空格
+     *         System.out.println(strArray[1]);
+     *       else
+     *         System.out.println(strArray[1]+' '+strArray[0]);
+     *     }
+     *   }
+     * }
+     */
+    private static void charReveese(String str) {
+        StringBuilder sb = new StringBuilder();
+        ArrayList<String> list = new ArrayList<>();
+        int size = str.length();
+        String s = "";
+        for (int i = 0; i < size; i++) {
+            if ((str.charAt(i) >= 'A' && str.charAt(i) <= 'Z' )||(str.charAt(i) >= 'a' && str.charAt(i) <= 'z' )){
+                s += str.charAt(i);
+            } else {
+                if (s.length() != 0)
+                    list.add(s);
+                s = "";
+            }
+
+        }
+        if (s.length() != 0)
+            list.add(s);
+        Collections.reverse(list);
+        for(int i = 0; i < list.size() - 1; i++){
+            System.out.print(list.get(i)+ " ");
+        }
+        System.out.print(list.get(list.size() - 1));
+
     }
 
     /**

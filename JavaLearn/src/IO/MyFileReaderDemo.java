@@ -1,7 +1,5 @@
 package IO;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -13,7 +11,7 @@ import java.io.IOException;
  * @Description  读文件
  */
 
-public class FileReaderDemo {
+public class MyFileReaderDemo {
     public static void main(String[] args) throws IOException {
         /**
          * 创建一个文件读取流对象，和指定名称的文件相关联
