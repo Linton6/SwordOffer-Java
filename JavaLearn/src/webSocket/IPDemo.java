@@ -1,4 +1,4 @@
-package 网络编程;
+package webSocket;
 
 /**
  * @Author Linton
@@ -14,8 +14,8 @@ public class IPDemo {
 //        System.out.println(i.toString());
 //        System.out.println(i.getHostAddress());
 //        System.out.println(i.getHostName());
-        InetAddress ia = InetAddress.getByName("www.baidu.com");
-        System.out.println(ia.getHostAddress()); // 为主
+        InetAddress ia = InetAddress.getByName("169.254.81.15");
+        System.out.println(ia.getHostAddress());
         System.out.println(ia.getHostName());
     }
 }
