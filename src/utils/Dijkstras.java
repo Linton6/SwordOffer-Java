@@ -1,3 +1,5 @@
+package utils;
+
 import java.util.*;
 
 public class Dijkstras {
@@ -78,7 +80,7 @@ class Vertex implements Comparable<Vertex> {
 
     @Override
     public String toString() {
-        return "Vertex [id=" + id + ", distance=" + distance + "]";
+        return "utils.Vertex [id=" + id + ", distance=" + distance + "]";
     }
 
     @Override

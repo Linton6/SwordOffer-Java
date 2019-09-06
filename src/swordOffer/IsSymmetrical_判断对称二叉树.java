@@ -5,7 +5,7 @@ package swordOffer;
  * @Date 2019/6/29 10:45
  * @Email lintonhank@foxmail.com
  * @Version 1.0
- * @Description 对称点额二叉树
+ * @Description 对称二叉树
  * 请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。
  *
  */
@@ -34,10 +34,10 @@ package swordOffer;
  */
 
 import java.util.*;
-public class IsSymmetrical {
+public class IsSymmetrical_判断对称二叉树 {
 
     public static void main(String[] args) {
-        IsSymmetrical is = new IsSymmetrical();
+        IsSymmetrical_判断对称二叉树 is = new IsSymmetrical_判断对称二叉树();
         TreeNode a = new TreeNode(8);
         TreeNode b = new TreeNode(6);
         TreeNode c = new TreeNode(6);

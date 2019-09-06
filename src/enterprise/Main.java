@@ -450,7 +450,7 @@ public class Main {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 2; i < n; i++) {
             for (int j = 2; j <= Math.sqrt(i); j++) {
-                if (i % j == 0) {
+                if (i % j == 0) { // 说明 i 这个数可以被1以外的数整除，不是素数
                     prime = false;
                     break;
                 }

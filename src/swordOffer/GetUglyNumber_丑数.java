@@ -8,7 +8,7 @@ package swordOffer;
  * @Description  暴力破解法
  */
 
-public class GetUglyNumber_Solution {
+public class GetUglyNumber_丑数 {
     public static void main(String[] args){
         System.out.println(GetUglyNumber_Solution(11));
     }

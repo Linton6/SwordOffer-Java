@@ -7,7 +7,7 @@ import java.util.*;
  * @Date 2019/6/24 11:08
  * @Email 649557938@qq.com
  * @Version 1.0
- * @Description
+ * @Description  两个链表中找到公共节点
  */
 
 public class FindFirstCommonNode {

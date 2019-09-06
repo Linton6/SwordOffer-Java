@@ -13,7 +13,7 @@ import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
 import java.util.*;
 import java.util.Scanner;
 public class C1 {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         Scanner in = new Scanner(System. in);
         String list1 = in.nextLine();
         String list2 = in.nextLine();
@@ -74,6 +74,100 @@ public class C1 {
             A[indexA] = max;
             return A;
         }
+    }
+
+   static class TreeNode{
+       public int val;
+        public   TreeNode left;
+       public  TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+
+    }
+    /**
+     * 判断完全二叉树
+     */
+    private static boolean judge(TreeNode node){
+        if (node == null) {
+            return false;
+        }
+//        while ()
+            return true;
+    }
+
+    public static void main(String[] args) {
+        TreeNode a = new TreeNode(8);
+        TreeNode b = new TreeNode(6);
+        TreeNode c = new TreeNode(10);
+        TreeNode d = new TreeNode(5);
+        TreeNode e = new TreeNode(7);
+        TreeNode f = new TreeNode(9);
+        TreeNode g = new TreeNode(11);
+        a.left = b; a.right = c; b.left = d; b.right = e;c.left = f; c.right = g;
+        depth(a);
+    }
+
+    /**
+     * 深度优先搜索树结构
+     */
+    private static void depth(TreeNode node) {
+        if (node == null) {
+            System.out.println("");
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(node);
+        while (!stack.isEmpty()) {
+            node = stack.pop();
+            System.out.print(node.val + " ");
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+    }
+
+    /**
+     * 层次打印二叉树  <>广度优先搜索树结构</>
+     */
+    private static void print(TreeNode node) {
+        if (node == null) {
+            System.out.println("");
+            return;
+        }
+        LinkedList<TreeNode> list = new LinkedList<>();
+        ArrayList<TreeNode> l = new ArrayList<>();
+        list.add(node);
+        boolean flag = true;
+        boolean leftNode = false;
+        while (!list.isEmpty()) {
+            node = list.pollFirst();
+            if (node.right != null && node.left == null) {
+                flag = false;
+                break;
+            }else  if (node.left != null && node.right != null){
+                if (leftNode == true){
+                    flag = false;
+                    break;
+                }
+                    list.add(node.left);
+                    list.add(node.right);
+            } else if(node.right == null && node.left != null) {
+                if (leftNode == false){
+                    leftNode = true;
+                } else {
+                    flag = false;
+                    break;
+                }
+            }
+
+        }
+        System.out.println(flag);
     }
 
 }

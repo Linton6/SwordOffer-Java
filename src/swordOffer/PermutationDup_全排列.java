@@ -11,19 +11,18 @@ import java.util.TreeSet;
  * @Description
  */
 
-public class PermutationDup {
+public class PermutationDup_全排列 {
     public static void main(String[] args) {
         String s = "abcd";
         String s1 = s.substring(0,0);
         String s2 = s.substring(2);
         CharSequence s3 = s.subSequence(1,3);
         System.out.println("s1 " + s1 + " s2 " + s2 + " s3 " +s3 );
-//        PermutationDup permutationDup = new PermutationDup();
+//        PermutationDup_全排列 permutationDup = new PermutationDup_全排列();
 //
 //        System.out.println(permutationDup.Permutation(s).toString());
     }
 
-    public  ArrayList<String> list = new ArrayList<String>();
     public ArrayList<String> Permutation(String str) {
         if(str == null ) {
             return null;
@@ -52,28 +51,33 @@ public class PermutationDup {
 
     }
 
+    /**
+     * 全排列
+     */
+    public  ArrayList<String> list = new ArrayList<String>();
+
     public void permutaions(char[] str, int n) {
-        if(str == null || n >= str.length) {
-            return;
-        }
-        int size = str.length;
-        if(n == size - 1) {
-            String s = "";
-            for(int i = 0; i < size; i++){
-                s = s + str[i];
-            }
-            list.add(s);
-        } else {
-            for(int i = n; i < size; i++) {
-                char temp = str[n];
-                str[n] = str[i];
-                str[i] = temp;
-                permutaions(str,n+1);
-                temp = str[n];
-                str[n] = str[i];
-                str[i] = temp;
-            }
-        }
+//        if(str == null || n >= str.length) {
+//            return;
+//        }
+//        int size = str.length;
+//        if(n == size - 1) {
+//            String s = "";
+//            for(int i = 0; i < size; i++){
+//                s = s + str[i];
+//            }
+//            list.add(s);
+//        } else {
+//            for(int i = n; i < size; i++) {
+//                char temp = str[n];
+//                str[n] = str[i];
+//                str[i] = temp;
+//                permutaions(str,n+1);
+//                temp = str[n];
+//                str[n] = str[i];
+//                str[i] = temp;
+//            }
+//        }
 
     }
 }

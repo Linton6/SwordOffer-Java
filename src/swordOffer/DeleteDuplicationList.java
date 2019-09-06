@@ -6,10 +6,10 @@ import java.util.*;
  * @Date 2019/6/29 8:21
  * @Email lintonhank@foxmail.com
  * @Version 1.0
- * @Description
+ * @Description 删除重复链表
  */
 
-public class DeleteDuplication {
+public class DeleteDuplicationList {
     public static void main(String[] args) {
         ListNode a = new ListNode(1);
         ListNode b = new ListNode(2);
@@ -20,8 +20,8 @@ public class DeleteDuplication {
         ListNode g = new ListNode(5);
         a.next = b;  b.next = c;  c.next = d;  d.next = e; e.next = f;  f.next = g;
 
-        DeleteDuplication del = new DeleteDuplication();
-       ListNode 阿斯达 =  del.deleteDuplication(a);
+        DeleteDuplicationList del = new DeleteDuplicationList();
+       ListNode res =  del.deleteDuplication(a);
         System.out.println();
 
     }
