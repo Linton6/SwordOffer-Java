@@ -17,6 +17,7 @@ public class 二叉树的深度和广度优先遍历 {
     }
     TreeNode root;
     public 二叉树的深度和广度优先遍历(int[] array){
+        // 根据给的数组构建二叉顺（数据是层次遍历的节点顺序）
         root=makeBinaryTreeByArray(array,1);
     }
 
@@ -49,13 +50,13 @@ public class 二叉树的深度和广度优先遍历 {
             System.out.println("empty tree");
             return;
         }
-        //     ArrayDeque<TreeNode> stack=new ArrayDeque<TreeNode>();
+//             ArrayDeque<TreeNode> stack=new ArrayDeque<TreeNode>();
         Stack<TreeNode> stack = new Stack();   //也可以用栈实现
         stack.push(root);
-        while(stack.isEmpty()==false){
+        while(!stack.isEmpty()){
             TreeNode node=stack.pop();
             System.out.print(node.value+"    ");
-            if(node.right!=null){
+            if(node.right!=null){ // 先右后左 这样弹出来的时候才能实现层次遍历
                 stack.push(node.right);
             }
             if(node.left!=null){
@@ -77,10 +78,10 @@ public class 二叉树的深度和广度优先遍历 {
         }
         ArrayDeque<TreeNode> queue=new ArrayDeque<TreeNode>();
         queue.add(root);
-        while(queue.isEmpty()==false){
+        while(!queue.isEmpty()){
             TreeNode node=queue.remove();
             System.out.print(node.value+"    ");
-            if(node.left!=null){
+            if(node.left!=null){   // 对列的话，就是从左节点到右节点了
                 queue.add(node.left);
             }
             if(node.right!=null){
@@ -102,7 +103,9 @@ public class 二叉树的深度和广度优先遍历 {
     public static void main(String[] args) {
         int[] arr={0,13,65,5,97,25,0,37,22,0,4,28,0,0,32,0};
         二叉树的深度和广度优先遍历 tree=new 二叉树的深度和广度优先遍历(arr);
+        System.out.println("深度优先遍历：");
         tree.depthOrderTraversal();
+        System.out.println("广度优先遍历：");
         tree.levelOrderTraversal();
     }
 }

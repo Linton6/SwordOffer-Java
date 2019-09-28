@@ -4,6 +4,8 @@ package newSwordOffer;
  * @Date 2019/8/30 20:00
  * @
  */
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 public class ALI {
     static int[] getIndexAndLongest(String users,int n) {
@@ -79,6 +81,7 @@ public class ALI {
         int k = in.nextInt();
         int[] arr = getIndexAndLongest(str,k);
         System.out.println(arr[0] + " " +arr[1]);
+
     }
 }
 
