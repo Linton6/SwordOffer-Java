@@ -3,6 +3,7 @@ package swordOffer;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.Executors;
 
 /**
  * 题目描述：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -16,7 +17,6 @@ public class ReConstructBinaryTree {
         int[] in = {4,7,2,1,5,3,8,6};
         ReConstructBinaryTree r = new ReConstructBinaryTree();
         TreeNode a = r.reConstructBinaryTree(pre, in);
-
 
     }
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {

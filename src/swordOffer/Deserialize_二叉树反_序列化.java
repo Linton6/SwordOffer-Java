@@ -24,7 +24,7 @@ public class Deserialize_二叉树反_序列化 {
         Deserialize_二叉树反_序列化 deserialize = new Deserialize_二叉树反_序列化();
         String s = deserialize.Serialize(a);
         TreeNode t = deserialize.Deserialize(s);
-        System.out.println();
+        System.out.println(s);
     }
 
     /**
