@@ -12,6 +12,9 @@ package leetcode;
  * http://www.noteanddata.com/leetcode-552-Student-Attendance-Record-II-java-solution-note.html
  */
 
-public class leetcode552StudentAttendance {
+public class leetcode学生出勤记录552 {
+    public static void main(String[] args) {
+
+    }
 }
 

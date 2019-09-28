@@ -11,7 +11,7 @@ package leetcode;
  * http://www.noteanddata.com/leetcode-494-Target-Sum-java-solution-note.html
  */
 
-public class leetcode494TargetSum {
+public class leetcode目标和494 {
     public static void main(String[] args) {
 
     }
