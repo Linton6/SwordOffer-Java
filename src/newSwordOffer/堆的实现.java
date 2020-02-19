@@ -1,7 +1,5 @@
 package newSwordOffer;
 
-import java.util.HashMap;
-
 /**
  * @Date 2019/9/2 15:31
  * @什么是堆
@@ -41,7 +39,7 @@ public class 堆的实现{
         for (int i = 0; i < 10; i ++) {
             int p = random.nextInt(10);
             System.out.print(p + " ");
-            heap.siftUp(p);
+            heap.add(p);
         }
 
         System.out.println(" ");
@@ -55,7 +53,7 @@ public class 堆的实现{
         System.out.print("堆排序: ");
 
         for (int i = 0; i < 10; i ++) {
-            System.out.print(heap.siftDown() + " ");
+            System.out.print(heap.remove() + " ");
         }
     }
     /*
@@ -68,10 +66,12 @@ public class 堆的实现{
 
     public static class Heap {
 
-        public int[] nums;
-        private int pointer;
 
-        public Heap(int capacity) {
+        // TODO  堆的数据结构
+        public int[] nums;    // 默认数组
+        private int pointer;  // 当前堆大小
+
+        public Heap(int capacity) { // 堆的容量
             nums = new int[capacity + 1];
             pointer = 1;
         }
@@ -80,11 +80,12 @@ public class 堆的实现{
          * 生成最小堆 - 从下到上，元素的插入
          * @param newVal
          */
-        public void siftUp(int newVal) {
+        // TODO  元素的插入-自底向上方法
+        public void add(int newVal) {
             if (pointer < 0 || nums == null || pointer >= nums.length) return;
 
             nums[pointer] = newVal;
-            int i = pointer, p;
+            int i = pointer, p;  // i是子节点，p是父节点
             pointer ++;
 
             while (true) {
@@ -92,7 +93,7 @@ public class 堆的实现{
                 p = i / 2;
                 if (nums[p] <= nums[i]) break;// 父节点大于子节点，不需要改动，直接break；
                 swap(p, i);
-                i = p;
+                i = p;  // 交换完以后，子节点变成父节点
             }
         }
 
@@ -106,17 +107,19 @@ public class 堆的实现{
          * 删除堆顶元素，堆排序，从上到下
          * @return
          */
-        public int siftDown() {
+        // TODO   元素的删除-自顶向下方法
+        public int remove() {
             if (pointer < 0 || nums == null || pointer > nums.length) return -1;
+
             int res = nums[1];
-            nums[1] = nums[pointer - 1];
+            nums[1] = nums[pointer - 1];  // 把堆结构最后一个节点放在根节点上
             int i = 1, child;
             pointer --;
-            while (true) {
+            while (true) {  // 两种情况break，一种子节点超出范围，一种子节点大于父节点（最小堆）
                 child = 2 * i;
                 if  (child >= pointer) break;
                 if (child + 1 < pointer) {
-                    if (nums[child] > nums[child + 1]) child ++;
+                    if (nums[child] > nums[child + 1]) child ++; // 说明nums[child + 1] 是较小的
                 }
                 if (nums[i] <= nums[child]) break;
                 swap(i, child);

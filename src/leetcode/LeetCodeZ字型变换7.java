@@ -13,16 +13,23 @@ import java.util.List;
 public class LeetCodeZ字型变换7 {
 
     public static void main(String[] args) {
-        int num = 3;
-        String s = "LEETCODEISHIRING";
-        System.out.println(convert(s,num));
+//        int num = 3;
+//        String s = "LEETCODEISHIRING";
+//        System.out.println(convert(s,num));
+
+        String ss = "dsadsd";
+        System.out.println(ss.indexOf('a'));
+        int a = 9;
+        boolean aa = false;
+        int b []  []  = new int[1][1];
+
 
     }
 
 
     public static String convert(String s, int numRows) {
-        //画图 自己看，有规律
-        //先找出竖行
+
+        // 先找出竖行
         if (numRows == 1) {
             return s;
         }
@@ -31,8 +38,9 @@ public class LeetCodeZ字型变换7 {
             return s;
         }
         StringBuilder sb = new StringBuilder();
-        //最大间距
+        // 最大间距
         int max = (numRows - 1) * 2;
+        /**--------------- 核心代码 START  ------------*/
         for (int i = 0; i < numRows; i++) {
             int ind = i;
             sb.append(s.charAt(ind));
@@ -50,6 +58,7 @@ public class LeetCodeZ字型变换7 {
                 }
             }
         }
+        /**--------------- 核心代码 END  ------------*/
         return sb.toString();
     }
     public static String convert1(String s, int num) {
