@@ -1,4 +1,4 @@
-package utils;
+package pathfinding;
 
 import java.util.*;
 
@@ -80,7 +80,7 @@ class Vertex implements Comparable<Vertex> {
 
     @Override
     public String toString() {
-        return "utils.Vertex [id=" + id + ", distance=" + distance + "]";
+        return "pathfinding.Vertex [id=" + id + ", distance=" + distance + "]";
     }
 
     @Override
