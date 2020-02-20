@@ -1,4 +1,4 @@
-package pathfinding;
+package pathfinding.others;
 /**
  * Java: Dijkstra算法获取最短路径(邻接矩阵)
  *

@@ -1,4 +1,4 @@
-package pathfinding;
+package pathfinding.others;
 
 
 public class Floyd {
